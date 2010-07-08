@@ -1,0 +1,35 @@
+==rstack - Ruby Stack Overflow API Wrapper
+
+    gem install rstack
+
+    Not much of this is implemented at all yet - **WIP**
+
+---
+
+===Get a list of all the badges
+  
+    se = RStack::StackExchange.new('api.stackoverflow.com')
+    se.badges
+
+---
+
+===Contributing
+
+* Contributions are welcome - I use github's Issue tracker for bug fixes (accompanying failing tests are awesome) and feature requests
+* Submit via fork and pull request (include tests)
+* Stick with my code style, and don't get mad if I make style changes to your code (consistency is a key to readability)
+* If you're working on something major, shoot me a message beforehand
+
+---
+
+===License
+
+(The MIT License)
+
+Copyright © 2010 John Crepezzi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ‘Software’), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
