@@ -2,11 +2,11 @@
 
     gem install rstack
 
-_Not much of this is implemented at all yet - **WIP**_
+Not much of this is implemented at all yet - **WIP**
 
 ---
 
-===Get a list of all the badges
+===Get a list of all the badges for a site
   
     se = RStack::StackExchange.new('api.stackoverflow.com')
     se.badges
