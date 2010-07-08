@@ -2,7 +2,7 @@
 
     gem install rstack
 
-    Not much of this is implemented at all yet - **WIP**
+_Not much of this is implemented at all yet - **WIP**_
 
 ---
 

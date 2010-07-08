@@ -6,9 +6,6 @@ spec = Gem::Specification.new do |s|
   s.author = 'John Crepezzi'
   s.add_development_dependency('rspec')
   s.add_runtime_dependency('json')
-  s.add_runtime_dependency('net/http')
-  s.add_runtime_dependency('zlib')
-  s.add_runtime_dependency('stringio')
   s.description = 'rstack is a Ruby wrapper for the Stack Exchange API'
   s.email = 'john@crepezzi.com'
   s.files = Dir['lib/**/*.rb']
