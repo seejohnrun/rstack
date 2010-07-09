@@ -2,7 +2,7 @@ module RStack
 
   class StackExchange
 
-    API_VERSION = '0.9'
+    attr_reader :api_host, :api_port
     
     # Create a new StackExchange object for interacting with the
     # API for a given site
@@ -14,17 +14,13 @@ module RStack
     
     # Get all badges for this StackExchange, in alphabetical order
     def badges
-      response = Net::HTTP.get_response(@api_host, "/#{API_VERSION}/badges", @api_port)
-      body = inflate_string(response.body)
-      # TODO error handling
-      JSON.parse(body)['badges'].map { |b| Badge.new(b) }
+      mediator = StackMediator.new(self, '/badges')
+      mediator.json['badges'].map { |b| Badge.new(b) }
     end
     
-    private
-
-    def inflate_string(string)
-      gz = Zlib::GzipReader.new(StringIO.new(string))
-      gz.read
+    def moderators(options = {})
+      mediator = StackMediator.new(self, '/users/moderators', options)
+      mediator.json['users'].map { |u| User.new(u) }
     end
     
   end

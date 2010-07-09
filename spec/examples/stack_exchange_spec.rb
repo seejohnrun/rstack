@@ -21,3 +21,22 @@ describe StackExchange, 'badges' do
   end
   
 end
+
+describe StackExchange, 'moderators' do
+
+  it 'should be able to count all of the site moderators' do
+    se = StackExchange.new(DEFAULT_API_HOST)
+    se.moderators.size.should_not == 0
+  end
+
+  it 'should be able to filter user names on a moderator request' do
+    se = StackExchange.new(DEFAULT_API_HOST)
+    moderators = se.moderators(:filter => 'a')
+    moderators.size.should_not == 0 # make sure we don't shortcut the test
+    moderators.each do |user|
+      # each returned user should have 'john' in their display name
+      user.display_name.downcase.include?('a').should be(true)
+    end
+  end
+  
+end
